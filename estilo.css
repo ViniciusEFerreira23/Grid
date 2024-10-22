@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial,sans-serif;
+    background-color:#ffebcd;
+    color: #c5b293;
+}
+
+header{
+    background-color: #c5b293;
+    color: #a59275;
+    padding: 20px 0px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1{
+    font-size: 2.5em;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    gap: 20px;
+}
+.navbar ul li a{
+    color: #ffebcd;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    transition: background-color 0.5s;
+}
+
+.navbar ul li a:hover{
+    background-color:#a59275;
+    border-radius: 5px;
+}
+
+.photo-gallery{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); /* ajustar todas as tabelas, repeat para aplicar a todas as colunas e o auto-fill se ajustar ao conteudo e o minmax para definir o minimo do maximo do tamanho das colunas e o 1fr é fração, ou seja, 250px seria a 1fr (250px equivale a proporção de 1fr)*/
+    grid-auto-rows: 250px ; /* cada linha com 250px */
+    gap: 15px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.photo-item img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    /* arruma a largura e o tamanho das imagens para ocupar o espaço do elemento pai */
+}
+.photo-item1 img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    /* arruma a largura e o tamanho das imagens para ocupar o espaço do elemento pai */
+}
+
+.photo-item{
+    grid-row: span 2;
+}
+
+.photo-item.tall{
+    grid-row: span 1;
+}
+.photo-item.tall2{
+    grid-column: span 2;
+}
+
+.photo-item.wide{
+    grid-column: span 2;
+}
+
+.footer{
+    padding: 10px;
+    background-color: #a59275;
+    bottom: 0;
+    text-align: center;
+}
